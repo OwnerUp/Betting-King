@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BETTING KING</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+padding:20px;
+color:white;
+}
+
+/* Animated Background */
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#7a0000 0%,transparent 70%);
+top:-150px;
+left:-100px;
+opacity:.35;
+animation:move1 8s ease-in-out infinite alternate;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:450px;
+height:450px;
+background:radial-gradient(circle,#4b004f 0%,transparent 70%);
+bottom:-150px;
+right:-100px;
+opacity:.25;
+animation:move2 10s ease-in-out infinite alternate;
+}
+
+@keyframes move1{
+from{transform:translateY(0px);}
+to{transform:translateY(40px);}
+}
+
+@keyframes move2{
+from{transform:translateY(0px);}
+to{transform:translateY(-40px);}
+}
+
+.container{
+position:relative;
+z-index:2;
+width:100%;
+max-width:420px;
+background:rgba(15,15,15,0.92);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,215,0,0.15);
+border-radius:30px;
+padding:32px 25px;
+text-align:center;
+box-shadow:
+0 0 35px rgba(255,0,0,.12),
+0 0 60px rgba(255,215,0,.05);
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.dp-wrap{
+display:flex;
+justify-content:center;
+}
+
+.dp{
+width:155px;
+height:155px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #d9aa3a;
+box-shadow:
+0 0 20px rgba(217,170,58,.4),
+0 0 40px rgba(255,0,0,.15);
+animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.03);}
+100%{transform:scale(1);}
+}
+
+h1{
+margin-top:22px;
+font-size:38px;
+font-weight:700;
+letter-spacing:1px;
+background:linear-gradient(90deg,#f5d67b,#ffffff,#f5d67b);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+0%{background-position:0%;}
+100%{background-position:200%;}
+}
+
+.sub{
+margin-top:8px;
+font-size:14px;
+color:#cfcfcf;
+}
+
+.tagline{
+margin-top:14px;
+font-size:15px;
+font-style:italic;
+color:#e4e4e4;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:28px;
+}
+
+.card{
+background:rgba(25,25,25,0.95);
+padding:18px 10px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.06);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(255,0,0,.18);
+}
+
+.card h2{
+font-size:24px;
+color:#f5d67b;
+}
+
+.card p{
+margin-top:6px;
+font-size:12px;
+color:#c3c3c3;
+}
+
+.btn{
+position:relative;
+overflow:hidden;
+display:block;
+margin-top:32px;
+padding:18px;
+border-radius:18px;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+color:white;
+background:linear-gradient(90deg,#8b0000,#d11818);
+box-shadow:0 0 30px rgba(209,24,24,.35);
+transition:.35s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:rgba(255,255,255,.18);
+transform:skewX(-20deg);
+animation:shineBtn 3s infinite;
+}
+
+@keyframes shineBtn{
+0%{left:-120%;}
+100%{left:140%;}
+}
+
+.badges{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:28px;
+}
+
+.badge{
+background:#121212;
+padding:14px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.05);
+font-size:14px;
+color:#dddddd;
+transition:.3s;
+}
+
+.badge:hover{
+transform:translateY(-4px);
+border-color:rgba(255,215,0,.2);
+}
+
+.footer{
+margin-top:30px;
+font-size:12px;
+color:#7e7e7e;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="dp-wrap">
+<img src="dp.jpg" class="dp">
+</div>
+
+<h1>BETTING KING</h1>
+
+<p class="sub">Premium Cricket Prediction Community</p>
+
+<p class="tagline">Where Strategy Meets Accuracy</p>
+
+<div class="stats">
+
+<div class="card">
+<h2>37K+</h2>
+<p>Members</p>
+</div>
+
+<div class="card">
+<h2>98%</h2>
+<p>Accuracy</p>
+</div>
+
+<div class="card">
+<h2>24×7</h2>
+<p>Live Tips</p>
+</div>
+
+</div>
+
+<a href="https://t.me/+1Fh3a-TSQOAzMzFl" target="_blank" class="btn">
+JOIN TELEGRAM
+</a>
+
+<div class="badges">
+
+<div class="badge">✔ Verified Analyst</div>
+
+<div class="badge">✔ Secure Community</div>
+
+<div class="badge">✔ Daily Winning Tips</div>
+
+<div class="badge">✔ Premium Support</div>
+
+</div>
+
+<div class="footer">
+© 2026 BETTING KING. All Rights Reserved.
+</div>
+
+</div>
+
+</body>
+</html>
