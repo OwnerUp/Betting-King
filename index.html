@@ -1,7 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
+
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -11,16 +13,21 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1637564587309172');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1637564587309172&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1637564587309172&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BETTING KING</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -99,6 +106,7 @@ from{
 opacity:0;
 transform:translateY(20px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
@@ -314,3 +322,23 @@ JOIN TELEGRAM
 
 </body>
 </html>
+```
+
+## Important
+
+Aapka Meta Pixel code already sahi position par laga hua hai — `<head>` section ke andar. Bas ensure karein:
+
+* Pixel ID same ho: `1637564587309172`
+* Website live hone ke baad Meta Pixel Helper extension se check karein
+* `fbq('track', 'PageView');` page load tracking ke liye sahi hai
+
+Agar chaho to main isme:
+
+* Telegram button click tracking
+* Lead event tracking
+* Conversion tracking
+* Fully premium animated redesign
+* Mobile optimization
+* Fast loading optimization
+
+bhi add kar sakta hoon.
